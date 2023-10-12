@@ -72,25 +72,29 @@
 
 <div class="h-12" />
 
-<div class="h-12 fixed bottom-0 left-0 w-full flex justify-around bg-[#F80200] items-center">
-	<button on:click={() => (openDrawer = true)}>
+<div class="h-12 fixed bottom-0 left-0 w-full flex justify-around bg-red-100 items-center">
+	<button class="hover:bg-red-200 w-1/3 center h-full" on:click={() => (openDrawer = true)}>
 		<Iconify icon="mingcute:dot-grid-fill" width="24" height="24" />
 	</button>
 
-	<button>
+	<button class="w-1/3 hover:bg-red-200 center h-full">
 		<Iconify icon="mingcute:fork-spoon-fill" width="24" height="24" />
 	</button>
 
-	<button>
+	<button class="w-1/3 hover:bg-red-200 center h-full">
 		<Iconify icon="mingcute:shopping-cart-2-fill" width="24" height="24" />
 	</button>
 </div>
 
-<style>
+<style lang="postcss">
 	.border-top {
 		border-top: 1px solid #d5d5d5;
 	}
 	.border-top:hover {
 		border-top: 1px solid red;
+	}
+
+	.center {
+		@apply flex justify-center items-center;
 	}
 </style>
